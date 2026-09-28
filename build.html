@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Build Write-Up — Kalaivani Parthi</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="work.html">Work</a>
+        <a href="story.html">Story</a>
+        <a href="build.html">Build</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <main>
+        <h1>Build Write-Up — AI Book Tracker</h1>
+
+        <h2>Stack chosen and why</h2>
+        <ul>
+            <li><strong>FastAPI</strong> — fastest way to build production-grade Python APIs with auto-generated docs.</li>
+            <li><strong>PostgreSQL in Docker</strong> — production-grade relational DB; Docker means it runs identically everywhere.</li>
+            <li><strong>Supabase</strong> — outsourcing auth to a specialist rather than rolling my own password system.</li>
+            <li><strong>Groq AI</strong> — free, fast, no credit card required.</li>
+        </ul>
+
+        <h2>The hardest thing that broke</h2>
+        <p>Mid-build, Groq deprecated the Llama model I was using. Every AI call returned <code>model_not_found</code> and I lost an hour confused. The fix: I ran <code>client.models.list()</code> to see what was actually available, switched to <code>qwen/qwen3.8-27b</code>, and added <code>/no_think</code> to the system prompt to prevent empty outputs from reasoning models.</p>
+
+        <h2>What I'd build next</h2>
+        <p>A minimal React frontend that consumes this API, deployed on Vercel. Then swap the scraper to monitor price changes on a schedule using a cron job.</p>
+
+        <h2>Plan to keep building</h2>
+        <p>Next piece: <strong>React frontend for Book Tracker</strong> — a public "browse books" page and a logged-in "my list" page. Real reminder: I've set a calendar event for <strong>October 15</strong> to start it.</p>
+    </main>
+
+    <footer>
+        <p>© 2026 Kalaivani Parthi</p>
+        <a href="https://internship.flyrank.ai/verify/YOUR-CREDENTIAL-ID" class="badge">FlyRank Graduate</a>
+    </footer>
+</body>
+</html>
