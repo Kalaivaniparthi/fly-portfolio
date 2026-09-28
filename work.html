@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Work — Kalaivani Parthi</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="work.html">Work</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <main>
+        <h1>Work</h1>
+
+        <article class="case">
+            <h2>Book Tracker API</h2>
+            <p><strong>Problem:</strong> I wanted to build a multi-user app that combines auth, AI, and a real database.</p>
+            <p><strong>What I did:</strong> Built a FastAPI + PostgreSQL + Docker API. Scraped 60 books, generated AI summaries with Groq, and let users save books to private reading lists using Supabase JWTs.</p>
+            <p><strong>What came of it:</strong> A working API where User A can never see User B's data. All endpoints tested in Swagger with real JWT auth.</p>
+            <p><a href="https://github.com/Kalaivaniparthi/book-tracker">GitHub →</a></p>
+        </article>
+
+        <article class="case">
+            <h2>Auth API with Supabase</h2>
+            <p><strong>Problem:</strong> I needed to understand how modern auth works — JWTs, protected routes, no hand-rolled password systems.</p>
+            <p><strong>What I did:</strong> Built a FastAPI service using Supabase as the identity provider. Added signup, login, logout, and protected routes with a reusable auth dependency.</p>
+            <p><strong>What came of it:</strong> A working API with padlock-protected endpoints in Swagger. Tampered tokens get rejected with 401.</p>
+            <p><a href="https://github.com/Kalaivaniparthi/todo-auth-api">GitHub →</a></p>
+        </article>
+
+        <article class="case">
+            <h2>CRUD API in Docker with PostgreSQL</h2>
+            <p><strong>Problem:</strong> Wanted to prove I could build something that survives restarts.</p>
+            <p><strong>What I did:</strong> Built a FastAPI CRUD API, then swapped in-memory storage for PostgreSQL running in Docker. Kept the routes identical — only the storage layer changed.</p>
+            <p><strong>What came of it:</strong> Proved persistence: created data, stopped all containers, restarted, data was still there.</p>
+            <p><a href="https://github.com/Kalaivaniparthi/todo-api">GitHub →</a></p>
+        </article>
+    </main>
+
+    <footer>
+        <p>© 2026 Kalaivani Parthi</p>
+        <a href="https://aifluency.flyrank.ai/verify/YOUR-ID" class="badge">FlyRank Graduate</a>
+    </footer>
+</body>
+</html>
