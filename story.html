@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Build Story — Kalaivani Parthi</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="work.html">Work</a>
+        <a href="story.html">Story</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <main>
+        <h1>How I built this portfolio with AI</h1>
+
+        <p><em>Posted: September 28, 2026</em></p>
+
+        <p>Ten weeks ago, I couldn't explain what an API was. Today I have a live portfolio with real backend projects.</p>
+
+        <h2>What I built</h2>
+        <ul>
+            <li>A FastAPI CRUD API</li>
+            <li>A PostgreSQL database in Docker</li>
+            <li>Supabase authentication with JWTs</li>
+            <li>An AI-powered book tracker (capstone)</li>
+        </ul>
+
+        <h2>The one thing AI did that I couldn't have done alone</h2>
+        <p>AI helped me debug every dead-end — DNS failures, Docker networking, deprecated models, Git conflicts. I spent 3 months solving problems I'd never seen before, with AI as my pair programmer.</p>
+
+        <h2>The one thing that broke</h2>
+        <p>Mid-capstone, Groq retired the Llama model I was using. Every AI call returned <code>model_not_found</code>. I spent an hour confused until I ran <code>client.models.list()</code> — and saw what was actually available. Switched to Qwen, added <code>/no_think</code>, and it worked.</p>
+
+        <p><strong>The lesson:</strong> External APIs change. Don't hardcode — always ask what's available.</p>
+    </main>
+
+    <footer>
+        <p>© 2026 Kalaivani Parthi</p>
+        <a href="https://internship.flyrank.ai/verify/YOUR-CREDENTIAL-ID" class="badge">FlyRank Graduate</a>
+    </footer>
+</body>
+</html>
